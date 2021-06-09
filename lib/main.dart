@@ -66,7 +66,7 @@ class _MyAppState extends State<MyApp> {
       title: 'Flutter Demo',
       theme: ThemeData(
           primarySwatch: Colors.blueGrey,
-          accentColor: Colors.blueAccent,
+          accentColor: Colors.amberAccent,
           canvasColor: Color.fromRGBO(255, 253, 237, 1),
           fontFamily: 'Raleway',
           textTheme: ThemeData.light().textTheme.copyWith(

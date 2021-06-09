@@ -3,20 +3,22 @@ import '../screens/filters_screen.dart';
 
 class MainDrawer extends StatelessWidget {
   Widget buildListTitle(IconData icon, String title, Function tapAction) {
-    return ListTile(
-      leading: Icon(
-        icon,
-        size: 36,
-      ),
-      title: Text(
-        title,
-        style: TextStyle(
-          fontFamily: 'RobotoCondensed',
-          fontSize: 24,
-          fontWeight: FontWeight.bold,
+    return GestureDetector(
+      child: ListTile(
+        leading: Icon(
+          icon,
+          size: 36,
         ),
+        title: Text(
+          title,
+          style: TextStyle(
+            fontFamily: 'RobotoCondensed',
+            fontSize: 24,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        onTap: tapAction,
       ),
-      onTap: tapAction,
     );
   }
 
@@ -31,12 +33,13 @@ class MainDrawer extends StatelessWidget {
             padding: EdgeInsets.all(20),
             alignment: Alignment.centerLeft,
             color: Theme.of(context).accentColor,
-            child: Text(
-              'Cooking Up!',
-              style: TextStyle(
-                fontWeight: FontWeight.w900,
-                fontSize: 30,
-                color: Theme.of(context).primaryColor,
+            child: Center(
+              child: Text(
+                'Cooking Up!',
+                style: TextStyle(
+                    fontWeight: FontWeight.w900,
+                    fontSize: 30,
+                    color: Colors.white),
               ),
             ),
           ),
